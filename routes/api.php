@@ -72,3 +72,8 @@ Route::middleware('auth:api')->group(function () {
     Route::get('/report-cards/{reportCard}/download', [ReportCardController::class, 'download']);
        // ->middleware('role:admin|parent|student');
 });
+
+Route::get('/test', function () {
+    return response()->json(['message' => 'API Laravel fonctionne !']);
+});
+
